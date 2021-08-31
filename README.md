@@ -1,0 +1,2 @@
+# first-bot
+Discord.jsチュートリアル
