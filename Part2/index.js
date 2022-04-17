@@ -3,8 +3,8 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 
 client.on("ready", async () => {
     const data = [{
-        name: "ping",
-        description: "ただ単にスラッシュコマンドに反応するだけです。",
+        name: "hello",
+        description: "Description about the slash command",
     }];
     await client.application.commands.set(data);
     console.log("Ready!");
@@ -14,9 +14,9 @@ client.on("interactionCreate", async (Interaction) => {
     if (!Interaction.isCommand()) {
         return;
     }
-    if (Interaction.commandName === "ping") {
-        await Interaction.reply("Pong!");
+    if (Interaction.commandName === "hello") {
+        await Interaction.reply("Hello World!!");
     }
-})
+});
 
 client.login("token");
