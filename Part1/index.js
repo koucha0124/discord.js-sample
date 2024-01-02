@@ -6,8 +6,8 @@ client.on('ready', () => {
 });
 
 client.on ('messageCreate', (message) => {
-    if (message.content === 'hello') {
-        message.reply('Hello')
+    if (message.content === '!ping') {
+        message.reply('Pong!')
     };
 });
 
